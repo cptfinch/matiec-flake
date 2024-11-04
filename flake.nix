@@ -2,7 +2,7 @@
   description = "Matiec IEC 61131-3 compiler";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
   outputs = { self, nixpkgs }: {
@@ -12,12 +12,12 @@
       };
     in pkgs.stdenv.mkDerivation {
       pname = "matiec";
-      version = "unstable-2024-10-11";  # Date-based version for master branch
+      version = "71b7135";  # Most recent commit hash - there is no releases nor tags 
 
       src = pkgs.fetchFromGitHub {
         owner = "thiagoralves";
         repo = "matiec";
-        rev = "master";
+        rev = "71b713522a1c48e44f5cfb8cdceb47ece0647ae9";
         sha256 = "OwTgGwI7wc1ePwemZNKXP8+XvDdGJgt0wUnVs3nu5+o=";
       };
 
